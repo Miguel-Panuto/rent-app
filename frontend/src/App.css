@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Remover todos as predefinições do CSS */ 
+*
+{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+/* Definindo para que o background esteja em 100% da altura da tela */
+html, body, #root
+{
+  min-height: 100%;
+}
+/* Definindo o fundo */
+body
+{
+  background: #000 url('./assets/background.jpg'); /* Define a imagem do bg */
+  background-size: cover; /* Define que o background ficará na tela toda */
+  -webkit-font-smoothing: antialiased !important; /* Deixa a fonte bem mais detalhada */
+}
+/* Definindo a fonte para o corpo inteiro, vale lembrar que os inputs e os buttons não herdam do body */
+body, input, button 
+{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* Serve basicamente para alinhar os conteúdos da tela */
+.container
+{
+  margin: 80px auto; /* Automatico dos lados e 80 de cima e baixo */
+  max-width: 450px; /* Tem uma largura máxima de 450px */
+  width: 100%;  /* Caso a largura seja menor de 450px ocupa a tela inteira */
+  display: flex; 
+  flex-direction: column; /* Itens correndo por coluna */
+  align-items: center; /* Alinhados ao centro */
+}
+/* Onde vai estar os componentes */
+.content
+{
+  width: 100%;
+  background: #FFF;
+  margin-top: 50px;
+  border-radius: 4px;
+  padding: 30px;
+}
+/* Estiliar o primeiro elemento p dentro de content */
+.content > p
+{
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px; 
+}
+/* Estilizar elementos do form */
+.content form 
+{
+  display: flex;
+  flex-direction: column; /* Elementos um abaixo do outro */
+}
+/* Estilizar o label de form */
+.content form label
+{
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content form label span
+{
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+/* Estilizar o input de form */
+.content form input 
+{
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px; /* Arredondar as bordas */
+  height: 45px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+/* Botões */
+.content button.btn
+{
+  border: 0;
+  border-radius: 2px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #fff;
+  cursor: pointer; /* Cursor modificar quando passar em cima do botão */
+}
+/* Quando o usuário passar o mouse em cima */
+.content button.btn:hover
+{
+  background: #e14f50;
+}
