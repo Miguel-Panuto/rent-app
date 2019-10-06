@@ -29,7 +29,7 @@ app.use((req, res, next) =>
     return next(); 
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/rent-api', {
+mongoose.connect('mongodb+srv://admin:admin@clusterteste-muzfy.azure.mongodb.net/omnistack?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
